@@ -1,1 +1,2 @@
 pyrf24
+rich
