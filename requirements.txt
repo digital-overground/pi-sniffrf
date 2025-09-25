@@ -1,4 +1,1 @@
-pyRF24
-RPi.GPIO
-spidev
-rich
+pyrf24
