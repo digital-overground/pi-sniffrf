@@ -3,7 +3,7 @@
 import time
 
 import RPi.GPIO as GPIO
-from RF24 import RF24, RF24_1MBPS, RF24_CRC_8, RF24_PA_LOW
+from pyrf24 import RF24, RF24_1MBPS, RF24_CRC_8, RF24_PA_LOW
 
 
 class RFRepeat:
