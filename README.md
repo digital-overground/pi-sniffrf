@@ -5,11 +5,11 @@ A Python project for capturing and repeating RF signals using two nRF24 modules 
 ## Hardware Setup
 
 - Raspberry Pi 4
-- 2x nRF24L01+ modules
+- 1x nRF24L01+ module (for capture)
 - Wiring:
-  - Capture module: CE=22, CSN=0
-  - Repeat module: CE=24, CSN=1
-  - VCC=3.3V, GND=GND, MOSI=10, MISO=9, SCK=11
+  - nRF24 module: CE=25, CSN=8
+  - VCC=5V (Pin 2), GND=GND (Pin 6)
+  - MOSI=10 (Pin 19), MISO=9 (Pin 21), SCK=11 (Pin 23)
 
 ## Installation
 

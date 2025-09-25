@@ -3,8 +3,8 @@
 # RF24 Configuration
 RF24_CONFIG = {
     # Pin configurations for two nRF24 modules
-    "CAPTURE": {"CE_PIN": 22, "CSN_PIN": 0, "CHANNEL": 76},
-    "REPEAT": {"CE_PIN": 24, "CSN_PIN": 1, "CHANNEL": 76},
+    "CAPTURE": {"CE_PIN": 25, "CSN_PIN": 8, "CHANNEL": 76},
+    "REPEAT": {"CE_PIN": 25, "CSN_PIN": 8, "CHANNEL": 76},
     # Radio settings
     "POWER_LEVEL": "LOW",  # LOW, HIGH, MAX
     "DATA_RATE": "1MBPS",  # 250KBPS, 1MBPS, 2MBPS

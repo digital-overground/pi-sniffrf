@@ -13,7 +13,7 @@ from rf_repeat import RFRepeat
 
 
 class RFSniffer:
-    def __init__(self, capture_ce=22, capture_csn=0, repeat_ce=24, repeat_csn=1):
+    def __init__(self, capture_ce=25, capture_csn=8, repeat_ce=25, repeat_csn=8):
         self.capture = RFCapture(ce_pin=capture_ce, csn_pin=capture_csn)
         self.repeat = RFRepeat(ce_pin=repeat_ce, csn_pin=repeat_csn)
         self.running = True
@@ -153,16 +153,16 @@ def main():
         help="Delay between repeated packets (default: 0.1)",
     )
     parser.add_argument(
-        "--capture-ce", type=int, default=22, help="Capture module CE pin (default: 22)"
+        "--capture-ce", type=int, default=25, help="Capture module CE pin (default: 25)"
     )
     parser.add_argument(
-        "--capture-csn", type=int, default=0, help="Capture module CSN pin (default: 0)"
+        "--capture-csn", type=int, default=8, help="Capture module CSN pin (default: 8)"
     )
     parser.add_argument(
-        "--repeat-ce", type=int, default=24, help="Repeat module CE pin (default: 24)"
+        "--repeat-ce", type=int, default=25, help="Repeat module CE pin (default: 25)"
     )
     parser.add_argument(
-        "--repeat-csn", type=int, default=1, help="Repeat module CSN pin (default: 1)"
+        "--repeat-csn", type=int, default=8, help="Repeat module CSN pin (default: 8)"
     )
     parser.add_argument(
         "--scan", action="store_true", help="Scan all channels (capture mode only)"
