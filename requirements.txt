@@ -1,4 +1,4 @@
-pyRF24>=0.5.1
-RPi.GPIO>=0.7.1
-spidev>=3.6
-rich>=13.7.0
+pyRF24
+RPi.GPIO
+spidev
+rich
