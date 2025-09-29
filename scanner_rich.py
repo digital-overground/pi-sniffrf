@@ -80,19 +80,19 @@ def scan_spectrum(radio, console, data_rate="1"):
 
     # Configure radio
     if data_rate == "2":
-        radio.set_data_rate(RF24_2MBPS)
+        radio.setDataRate(RF24_2MBPS)
         rate_text = "2 Mbps"
     elif data_rate == "250":
-        radio.set_data_rate(RF24_250KBPS)
+        radio.setDataRate(RF24_250KBPS)
         rate_text = "250 kbps"
     else:
-        radio.set_data_rate(RF24_1MBPS)
+        radio.setDataRate(RF24_1MBPS)
         rate_text = "1 Mbps"
 
     # Configure for noise detection
     radio.set_auto_ack(False)
-    radio.disable_crc()
-    radio.set_address_width(2)
+    radio.disableCRC()
+    radio.setAddressWidth(2)
 
     # Use multiple noise addresses
     noise_addresses = [
@@ -147,11 +147,11 @@ def scan_spectrum(radio, console, data_rate="1"):
                         # Listen for a little
                         radio.listen = True
                         time.sleep(0.00013)  # 130 microseconds
-                        found_signal = radio.test_rpd()
+                        found_signal = radio.testRPD()
                         radio.listen = False
 
                         # Check for signal using multiple methods
-                        if found_signal or radio.test_rpd() or radio.available():
+                        if found_signal or radio.testRPD() or radio.available():
                             display.update_channel(channel, True)
                             radio.flush_rx()  # discard packets of noise
 
